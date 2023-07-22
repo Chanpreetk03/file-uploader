@@ -32,7 +32,7 @@ fileSchema.post("save" , async function(doc){
             }
         });
         //send mail
-        let info=await transporter.sendMail({
+        let info=await createTransport.sendMail({
             from:`fileUploader`,
             to:doc.email,
             subject:"new file uploaded",
